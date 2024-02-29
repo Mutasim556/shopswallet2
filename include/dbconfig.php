@@ -11,8 +11,9 @@ try {
   error_log($e->getMessage());
   //Should be a message a typical user could understand
 }
-    
-    $set = $mysqli->query("SELECT * FROM `setting`")->fetch_assoc();
+  $msg = '';  
+  $msgno = '';  
+  $set = $mysqli->query("SELECT * FROM `setting`")->fetch_assoc();
 	$main = $mysqli->query("SELECT * FROM `tbl_clap`")->fetch_assoc();
 	date_default_timezone_set($set['timezone']);
 ?>
